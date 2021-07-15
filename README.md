@@ -204,3 +204,53 @@
 - If you are on you machine
     - > reboot
     - Remove the pendrive, or select another boot method on BIOS, idk
+
+## Xorg
+- A display server
+
+### Installing
+- > pacman -S xorg-server
+- Driver Installation
+  - > pacman -S xf86-video-intel
+  - Because Im using Intel Graphics
+- __important__ if you're using VirtualBox you need to instead install `xf86-video-vesa`
+
+
+### Config files:
+- Can be edited at: 
+    - `/etc/X11/xorg.conf`
+    - `/etc/xorg.conf`
+
+## KDE Plasma
+- Desktop Environment
+
+### Installing
+1. > pacman -S plama-meta
+    - > 2 //noto-fonts
+    - > 1 // phonon-qt5-gstreamer
+    - > Y
+
+## SDDM
+- Display Manager
+1. > pacman -S sddm
+
+## bspwm
+- Tiling window manager
+
+### Installing
+1. > pacman -S bspwm
+2. > pacman -S xshkd
+
+### Configuring
+1. > install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
+1. > install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
+
+## Configuring
+1. Enable sddm
+    - > sudo systemctl enable sddm
+2. Enable NetworkManager
+    - > sudo systemctl enable NetworkManager
+3. Add `sddm` config file
+    - > sudo vim /usr/lib/sddm/sddm.conf.d/default.conf
+4. Reboot
+    - > sudo systemctl reboot
