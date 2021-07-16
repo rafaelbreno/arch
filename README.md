@@ -210,10 +210,13 @@
 
 ### Installing
 - > pacman -S xorg-server
+- > pacman -S xorg xorg-xinit
 - Driver Installation
-  - > pacman -S xf86-video-intel
-  - Because Im using Intel Graphics
-- __important__ if you're using VirtualBox you need to instead install `xf86-video-vesa`
+    - > pacman -S xf86-video-intel
+    - Because Im using Intel Graphics
+- __important__ if you're using VirtualBox you need to instead install:
+    - > `pacman -S xf86-video-vesa`
+    - > `pacman -S virtualbox-guest-utils`
 
 
 ### Config files:
@@ -234,16 +237,25 @@
 - Display Manager
 1. > pacman -S sddm
 
-## bspwm
+## i3-gaps
 - Tiling window manager
 
 ### Installing
-1. > pacman -S bspwm
-2. > pacman -S xshkd
+1. > pacman -S i3-gaps
+2. > pacman -S i3status // optional
 
 ### Configuring
-1. > install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
-1. > install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
+1. > vim ~/.config/.xinitrc
+2. Comment these:
+```
+twm &
+// and anything between them
+exec xterm....
+```
+3. Add: `exec i3`
+
+## Polybar
+1. > pacman -S polybar
 
 ## Configuring
 1. Enable sddm
