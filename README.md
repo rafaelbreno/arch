@@ -39,6 +39,7 @@
 
 #### Layout
 - I'll be following the `UEFI with GPT`
+
 | Mount Point           | Partition                 | Partition Type        | Suggested Size          |
 | --------------------- | ------------------------- | --------------------- | ----------------------- |
 | /mnt/boot or /mnt/efi	| /dev/efi_system_partition	| EFI system partition	| 550M                    |
