@@ -219,6 +219,11 @@ pacman -Sy archlinux-keyring
     - > reboot
     - Remove the pendrive, or select another boot method on BIOS, idk
 
+## WiFi
+- > sudo systemctl enable NetworkManager.service
+- > nmcli device status
+- https://wiki.archlinux.org/title/NetworkManager
+
 ## Xorg
 - A display server
 
