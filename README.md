@@ -8,6 +8,9 @@ pacman-key --refresh-keys
 pacman -Sy archlinux-keyring
 ```
 
+## Disabling PC Speaker
+> rmmod pcspkr
+
 ## Pre-installing
 
 - If you're testing it on "VirtualBox" remember to enable UEFI
