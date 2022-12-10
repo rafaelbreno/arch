@@ -176,6 +176,8 @@ pacman -Sy archlinux-keyring
 1. > useradd -m rafa
 2. Give it some permission
     - > usermod -aG wheel,audio,video,optical,storage rafa
+3. Give it a password:
+    - > passwd rafa
 
 #### Give sudo privileges
 1. Install sudo
